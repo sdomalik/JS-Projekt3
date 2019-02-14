@@ -48,7 +48,16 @@ function initMap() {
       });
 
     //add marker in the center of map
-    let marker = new google.maps.Marker({ position: locationData, map: map });
+    let marker = new google.maps.Marker({
+      position:
+        locationData,
+      map: map,
+      icon: {
+        path: google.maps.SymbolPath.CIRCLE,
+        scale: 10,
+        strokeColor: 'purple'
+      }
+    });
 
     //changing position of marker when keydown
     window.addEventListener("keydown", function (e) {
